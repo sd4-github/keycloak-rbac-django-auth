@@ -1,0 +1,25 @@
+{
+  "client": "erp-api",
+  "realm": "erp",
+  "description": "Access control matrix for the erp-api client, mirrored into Django auth.Groups/Permissions by `manage.py import_acm`. Rows: subjects (Keycloak roles). Columns: resources (Django models). Cells: actions.",
+  "roles": {
+    "erp-admin": {
+      "grants": ["erp.view_all_invoices", "erp.view_acm"],
+      "invoice": ["view", "add", "change", "delete"],
+      "orgunit": ["view"]
+    },
+    "erp-finance": {
+      "grants": ["erp.view_all_invoices"],
+      "invoice": ["view", "change"]
+    },
+    "pune-coordinator": {
+      "invoice": ["view", "change"]
+    },
+    "mumbai-coordinator": {
+      "invoice": ["view", "change"]
+    },
+    "front-desk": {
+      "invoice": ["view"]
+    }
+  }
+}
