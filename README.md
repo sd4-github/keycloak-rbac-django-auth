@@ -140,3 +140,7 @@ python manage.py test erp
 
 Covers the ACM import/re-import, claims→group mapping, Layer-1 denials,
 Layer-2 row scoping, foreign-row 404s, and the ACM audit endpoint.
+
+## Built With
+
+Made with [OpenCode](https://opencode.ai).
